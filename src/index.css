@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Outfit", system-ui, sans-serif;
+  --color-primary: #FFFFFF;
+  --color-secondary: #0072BB;
+  --color-accent: #F39C12;
+  --color-text: #1E293B;
+  --color-gray: #F4F4F4;
+}
+
+body, html {
+  font-family: var(--font-sans);
+  color: var(--color-text);
+  background-color: var(--color-primary);
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+}
+
+.nav-glow {
+  transition: all 0.3s ease;
+}
+.nav-glow:hover {
+  color: #F39C12 !important;
+  text-shadow: 0 0 10px rgba(243, 156, 18, 0.7), 0 0 20px rgba(243, 156, 18, 0.4);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 2rem));
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Modern Rendering Optimizations to reduce scrolling lag below the fold */
+section, footer {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}
