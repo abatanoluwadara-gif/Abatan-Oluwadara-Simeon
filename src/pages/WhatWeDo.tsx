@@ -1,4 +1,4 @@
-import { Wrench, ShieldAlert, Truck, GraduationCap, Building2, HardHat, ArrowRight, Flame } from 'lucide-react';
+import { Wrench, ShieldAlert, Truck, GraduationCap, Building2, HardHat, ArrowRight, Flame, Gauge } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 
@@ -17,6 +17,22 @@ const pillars = [
       'Lagging of steam pipes',
       'Installation of PU and rock wool panels',
       'Corrosion control & turnaround maintenance'
+    ]
+  },
+  {
+    id: 'steam-boilers',
+    icon: Gauge,
+    title: 'Installation and Maintenance of High Pressure Steam Boilers',
+    for: 'Manufacturing Plants | Food & Beverage | Chemical & Refineries',
+    color: 'text-[#111111]',
+    bg: 'bg-[#0072BB]/10',
+    capabilities: [
+      'Turnkey installation, positioning, alignment, and commissioning of industrial high-pressure steam boilers',
+      'High-pressure steam piping distribution networks, steam headers, and PRV station engineering',
+      'Boiler descaling, chemical boil-out, refractory brick repair, and fire-tube/water-tube replacements',
+      'Burner servicing, combustion efficiency tuning, fuel-to-air calibration, and flue gas emissions analysis',
+      'Hydrostatic pressure testing, ultrasonic thickness gauging, and statutory inspection certification support',
+      'Condensate return loop optimization, steam trap auditing, and safety relief valve calibration & maintenance'
     ]
   },
   {
